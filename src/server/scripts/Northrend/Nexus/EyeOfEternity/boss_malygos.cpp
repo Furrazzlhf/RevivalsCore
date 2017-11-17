@@ -518,7 +518,7 @@ public:
                     me->NearTeleportTo(x, y, z, o);
                     // Respawn Iris
                     instance->SetData(DATA_RESPAWN_IRIS, 0);
-                    _despawned = true;
+                    _despawned = false;
                     break;
                 case ACTION_CYCLIC_MOVEMENT:
                     me->GetMotionMaster()->MoveCirclePath(MalygosPositions[3].GetPositionX(), MalygosPositions[3].GetPositionY(), 283.2763f, 120.0f, true, 16);

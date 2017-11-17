@@ -246,12 +246,12 @@ float RiftAndSpawnsLocations[ENCOUNTER_CHRONO_SPAWNS][5]=
     {NPC_EPOCH, 2451.809326f, 1112.901245f, 149.220459f, 3.363617f}
 };
 
-#define GOSSIP_ITEM_ARTHAS_0 "Je suis prêt pour l'épuration de Stratholme."
-#define GOSSIP_ITEM_ARTHAS_1 "Oui , nous sommes prêt mon Prince."
-#define GOSSIP_ITEM_ARTHAS_2 "Nous ne faison que le mieux pour Lordaeron."
-#define GOSSIP_ITEM_ARTHAS_3 "Je suis prêt."
-#define GOSSIP_ITEM_ARTHAS_4 "Pour Lordaeron!"
-#define GOSSIP_ITEM_ARTHAS_5 "Je suis prêt à combattre Mal'Ganis sir."
+#define GOSSIP_ITEM_ARTHAS_0 "I'm ready to start Culling of Stratholme."
+#define GOSSIP_ITEM_ARTHAS_1 "Yes, my Prince. We're ready."
+#define GOSSIP_ITEM_ARTHAS_2 "We're only doing what is best for Loarderon your Highness."
+#define GOSSIP_ITEM_ARTHAS_3 "I'm ready."
+#define GOSSIP_ITEM_ARTHAS_4 "For Lordaeron!"
+#define GOSSIP_ITEM_ARTHAS_5 "I'm ready to battle the dreadlord, sire."
 
 class npc_arthas : public CreatureScript
 {
@@ -442,7 +442,7 @@ public:
                 case 20:
                     gossipStep = 2;
                     me->SetFlag(UNIT_NPC_FLAGS, UNIT_NPC_FLAG_GOSSIP);
-                    SetRun(true);
+                    SetRun(false);
                     SetHoldState(true);
                     break;
                 case 21:
@@ -685,7 +685,7 @@ public:
                             break;
                         case 25:
                             Talk(SAY_PHASE201);
-                            JumpToNextStep(1000);
+                            JumpToNextStep(12000);
                             break;
                         case 26:
                             SetEscortPaused(false);
